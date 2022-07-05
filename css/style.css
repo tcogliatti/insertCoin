@@ -1,0 +1,624 @@
+h2, h3, p, li, a,.login, td,h4,label, div, td{ /* tipografía */
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: repeat;
+}
+.latin, span{
+    font-style: italic;
+}
+li>span{
+    font-style:unset;
+}
+div>a, nav a{ /* quitar decoración a anchors */
+    text-decoration: none;
+    color: black;
+}
+.container{
+    width: 95%;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+}
+/******************** Header *******************/
+.imgHeader{
+    margin-left: 3vw;
+    width: 97%;
+}
+header{
+    position: relative;
+    margin-bottom: 1em;
+}
+
+/******************** Navegador *******************/
+
+.boxNav{
+    z-index: 100;
+    position: absolute;
+    top: 0vh;
+    left: 0px;
+    width: 60%;
+    padding: 20px 20px 20px 0px;
+    background: white;
+    transition: .3s;
+    box-shadow: 13px 16px 29px -6px rgba(0,0,0,0.75);
+}
+.esconder{
+    display: none;
+}
+.esconder2{
+    display: none;
+}
+nav li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    height: 40px;
+    list-style: none;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 0px;
+    justify-content: center;
+
+    padding-top: 2px;
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px;
+    padding-left: 3px;
+}
+.btnMenu{
+    display: visible;
+    height: 4%;
+    position: absolute;
+    left: 2vh;
+    top: 4vw;
+    z-index: 40;
+}
+.topBarNav{
+    display: flex;
+    justify-content: space-arround;
+    align-items: center;
+}
+.liNavSelSeleccionado{
+    background: linear-gradient(148deg, rgba(131,23,185,0.48783263305322133) 24%, rgba(31,18,219,0.45702030812324934) 74%);
+}
+.salirMenu{
+    position: absolute;
+    margin-top: 3px;
+    margin-right: 3px;
+    right: 0px;
+    top: 0px;
+    z-index: 120;
+}
+
+/****************** footer ******************************/
+
+footer{
+    width: 100%;
+    visibility: visible;
+    padding-bottom: 0px;
+    margin-top: 50px;
+    border-top: 6px solid rgba(131,23,185,1);
+}
+.containerFooter{
+    margin-top: 20px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(113,113,232);
+    background: linear-gradient(148deg, rgba(56, 56, 126, 0.641) 3%, rgba(88, 34, 114, 0.481) 79%);
+    width: 100%;
+}
+.devData{
+    margin-top: 20px;
+    width: 100%;
+    border-top: 3px solid  rgba(131,23,185,1);
+    padding-top: 10px;
+    background-color: rgba(85, 53, 53, 0.305);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.containerFooter a{
+    color: rgba(0, 0, 0, 0.482);
+}
+.devData>p{
+    color: rgb(142, 142, 142);
+}
+.tablaContacto tr td a{
+    text-decoration: none !important;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.imagContact{
+    width: 25px;
+    opacity: 50%;
+
+}
+
+/**************************   HOME  Carrusel  **********************/
+
+.carrusel{
+    width: 118%;
+    min-height: 150vh;
+    max-width: 820px;
+    overflow: hidden;
+    position: relative;
+}
+
+/****************** Captcha ****************/
+
+.boxCaptchaImg{
+    border-radius: 5px;
+    width: 200px;
+    margin-bottom: 25px;
+    height: 91px;
+}
+.divCentrado{
+    visibility: visible;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#idBoxCaptcha>div:first-child{
+    margin-top: 5px ;
+    margin-right: 5px;
+    justify-content: left;
+}
+#captchaIn{
+    border: 1px solid rgb(112, 112, 112);
+    border-radius: 4px;
+    background-color: white;
+}
+.esconderMensaje{
+    display: none;
+    visibility: hidden;
+}
+#enviarCaptcha{
+    margin-top: 5px;
+}
+
+/*************** compras *******************************/
+
+.boxtablaCompras{
+    width: 100%;
+    height: 300px;
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 2fr repeat(3,1fr) 2fr;
+    grid-template-areas: 
+                        "SelProducto SelProducto"
+                        "boxImg selUnit"
+                        "boxImg valorPrecioUnit"
+                        "boxImg        precioSubtotal      "
+                        "addProd        addProd     ";
+}
+.boxImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 125px;
+    height: 118px;
+    grid-area: boxImg;
+    box-shadow: 10px 10px 40px -9px rgba(0, 0, 0, 0.513);
+}
+.btnAgregar{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    grid-area: addProd;
+    width: 180px;
+    height: 40px;
+}
+.boxImg>img{
+    width: 100%;
+}
+.SelProducto{
+    width: 40%;
+    height: 45px;
+    grid-area: SelProducto;
+    box-shadow: 10px 16px 40px -9px rgba(0,0,0,0.35);
+}
+.selUnit{
+    box-shadow: 10px 16px 40px -9px rgba(0,0,0,0.35);
+    grid-area: selUnit;
+    height: 45px;
+    width: 150px;
+    border-radius: 25px;
+    border: 1px solid rgb(97, 97, 97);
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.selUnit p{
+    height: fit-content;
+    font-size: x-large;
+    margin: 0%;
+}
+#valorPrecioUnitario{
+    grid-area: valorPrecioUnit;
+}
+#boxPrecSubt{
+    grid-area: precioSubtotal;
+}
+.precSubtot{
+    color: rgb(6, 55, 8);
+    font-size: 30px;
+}
+.cambioUnits{
+    padding: 3px;
+    height: 100%;
+    border-radius: 10px;
+}
+.columna{
+    width: 20px;
+}
+.columnaL{
+    width: 90px;
+}
+.columnaS{
+    width: 15;
+}
+.divisionLista{
+    border-top: 2px solid black;
+    height: 1px;
+    width: 100%;
+}
+.division{
+    height: 100%;
+    height: 20px;
+    visibility: visible;
+}
+.tablaCompras{
+    width: 315px;
+    font-size: 80%;
+}
+.contenedorTablaCompras{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 315px;
+    visibility: visible;
+    background-color: rgba(255, 255, 255, 0.329);
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.fila{
+    margin-left: 0px;
+    width: 100%;
+}
+.cuerpo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.iconEliminarPod{
+    width: 15px;
+}
+
+/**************************   Contactenos   **********************/
+
+.BoxMensaje{
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
+    width: 95%;
+    background: linear-gradient(148deg, rgba(53,91,179,0.87718837535014) 33%, rgba(102,63,207,0.76234243697479) 57%);
+    box-shadow: 10px 16px 40px -9px rgba(0,0,0,0.75);
+}
+#btnMensaje{
+    margin-bottom: 15px;
+}
+ #textoMensaje{
+     width: 200px;
+     height: 100px;
+}
+#mejeEnviadoCorrectamente{
+    margin-top:0px;
+    margin-bottom: 15px;
+}
+.tituloMensaje{
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
+.boxTitMensaje{
+    background-color: rgba(194, 188, 171, 0.37);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.inputMensaje{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/**************************   HOME   **********************/
+
+
+
+/************ Administrador ************/
+
+.accionesAdmin{
+    width: 20px;
+    margin-left: 5px; 
+}
+.icoAccionProd{
+    width: 30px;
+}
+#respuesta tr:nth-child(odd) {
+    background-color: #99999949;
+}
+
+#respuesta tr:nth-child(even) {
+    background-color: #dbdbdb4b;
+}
+.divBotoneraAdmin{
+    width: 268px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.centrado{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.estiloError{
+    text-align: center;
+    color: rgb(123, 44, 44);
+}
+.boxAdminProd{
+    background: white;
+    max-width:70%;
+    min-width: 300px;
+}
+.tablaContacto{
+    border-collapse: separate;
+    border-spacing: 10px 5px;
+}
+
+/***********************************************************************************************************/
+
+/***********************************************************************************************************/
+
+/***********************************************************************************************************/
+
+/***********************************************************************************************************/
+
+/***********************************************************************************************************/
+
+/********* media queries escreen width>550px  ************/
+
+@media screen and (min-width: 550px){
+    .container{
+        width: 820px !important;
+        margin-top: 70px;
+        flex-direction: row;
+    }
+    .btnMenu,.topBarNav, .salirMenu{
+       display: none;
+    }
+    nav{
+        position: sticky;
+        top:0;
+        margin-bottom: 20px;
+    }
+
+    /******************* Barra de Navegacion ******************/
+    .boxNav{
+        width: 100%;
+        position: sticky;
+        top:0px;
+        background-color: white;
+        z-index: 1;
+        box-shadow: -1px 35px 40px -26px rgba(0,0,0,0.75);
+    }
+    .esconder{
+        display: flex;
+    }
+    .liNavSelSeleccionado{
+        background: transparent;
+        border-bottom: 6px solid rgba(131,23,185,1);
+    }
+    #barraNavRespon{
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        visibility: visible;
+        width: 100%;
+        height: 100;
+        border-left: 1px;
+        border-right: 1px;
+        margin-bottom: 0px;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+        padding: 0px;
+        margin: 0px;
+    }
+    nav li{
+        list-style: none;
+        width: 20%;
+        padding: 10px;
+        text-align: center;
+        border-top: none;
+        transition: 0.2s;
+    }
+    .liNavSel:hover, .linkExterAncor:hover{
+        background: linear-gradient(148deg, rgba(65, 12, 91, 0.375) 24%, rgba(23, 15, 140, 0.341) 74%);
+    }
+
+    /******************* Barra de Navegacion ******************/
+
+ 
+    /********************** compras ****************/
+    .boxImg, .conteinerCompras,.boxCompra{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .conteinerCompras{
+        width: 100%;
+    }
+    .boxCompra{
+        width: 100%;
+        height: 100%;
+    }
+    .boxImg{
+        width: 90%;
+        height: 100%;
+        margin-right: 10px;   
+        overflow: hidden; 
+    }
+    .boxImg>img{
+        width: 100%;
+    }
+    .SelProducto{
+        width: 100%;
+    }
+    .selUnit{
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .boxUnitPrice, .boxPrecSubt{
+        display: flex;
+        flex-direction: row nowrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .boxUnitPrice{
+        width: 50%;
+        grid-area: valorPrecioUnit;
+    }
+    .boxtablaCompras{
+        width: 100%;
+        height: 250px;
+        padding-bottom: 40px;
+        display: grid;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        grid-template-areas: 
+                            "   boxImg       SelProducto     selUnit"
+                            "   boxImg        valorPrecioUnit       valorPrecioUnit"
+                            "   boxImg      addProd       precioSubtotal ";
+    }
+    .contenedorTablaCompras{
+        font-size: 20px;
+        width: 100%;
+    }
+    .tablaCompras{
+        width: 80%;
+        font-size: 80%;
+    }
+    .columna{
+        width: 15vw;
+    }
+    .columnaL{
+        width: 15vw;
+    }
+    .columnaS{
+        width: 2vw;
+    }
+
+   /********************** contactenos ****************/
+    #textoMensaje{
+        width: 300px;
+        height: 200px;
+    }    
+    .tituloMensaje{
+        font-size: 1.5em;
+    }    
+    .inputMensaje{
+        margin: 10px;
+    }    
+    .boxTitMensaje{
+     margin-top:20px ;   
+     margin-bottom: 20px;
+    } 
+
+    /********************** productos ****************/
+    
+
+    /*********************** footer *******************/
+
+    footer{
+        flex-direction: row ;
+    }
+    .devData{
+        display: flex; 
+        flex-direction: row ;
+        justify-content: space-around;
+    }
+    .containerFooter_contTables{
+        display: flex;
+        flex-direction: row ;
+    }
+
+    /************ Administrador ************/
+
+    .mostrarBoxMensajeCorto, .mostrarBoxMensajeVER, .mostrarBoxMensajeLargo{
+        width: 436px;
+    }
+    .boxTextAreaDescr{
+        width: 426px;
+        height: 186px;
+    }
+
+
+}
+/***********************************************************************************************************/
+
+/***********************************************************************************************************/
+
+/***********************************************************************************************************/
+
+/********* media queries escreen width>820px  ************/
+
+@media screen and (min-width: 820px){
+    header, nav, .container, footer, .boxNav{
+        width: 820px !important;
+    }
+    .imgHeader{
+        position: relative;
+    }
+}

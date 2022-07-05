@@ -1,0 +1,65 @@
+
+    <!-------------------- Compras ---------------------->
+
+    <section class="conteinerCompras">
+        <div class="boxCompra">
+            <div class="boxtablaCompras">
+                <div class="boxImg">
+                    <img id="boxImagCompras"src="./images/img_select_prod.png" alt="">
+                </div>
+                <select name="producto" selected="Producto" id="selectorProducto" class="SelProducto form-select rounded-pill">
+                </select>
+                <div class="selUnit">
+                    <img class="cambioUnits" src="./images/less_black.png" alt="">
+                    <div class="contentUnit">
+                        <p id="boxUnit">1</p>
+                    </div>
+                    <img class="cambioUnits" src="./images/plus_black.png" alt="">
+                </div>
+                <div class="boxUnitPrice">
+                    <span>unit_$ </span>
+                    <span id="valorPrecioUnitario">-.-</span>
+                </div>
+                <div class="boxPrecSubt">
+                    <span>$ </span>
+                    <span id="precioSubtotal" class="precSubtot">-.-</span>
+                </div>
+                <button type="button" class="btn btn-success btnAgregar" id="btnAgregarAcarrito">Agregar a carrito</button>
+            </div>
+        </div>
+    </section>
+                
+                
+                <!-------------------- lista de compras -------------------->
+                <div class="contenedorTablaCompras">
+                    <div class="divisionLista"></div>
+                        <table id="tablaItemsCarrito" class="tablaCompras">
+                            <!-- aqui es donde entramos con la lista de compras -->
+                        </table>
+                    <div class="divisionLista"></div>
+                        <table class="tablaCompras">
+                            <tr class="fila">
+                                <td class="columna">Totales</td>
+                                <td class="columna">Unid.</td>
+                                <td class="columna" id="boxUnidFinal">-</td>
+                                <td class="columnaL">Costo Final</td>
+                                <td class="columna" id="boxCostoFinal">$ -.-</td>
+                                <td class="columnaS"></td>
+                            </tr>
+                        </table>
+                    </div>
+            </section>
+            <div>
+                <!-- <span>
+                    <p class=>Total</p>
+                </span> -->
+                <span>
+                    <h1 class="precSubtot" id="finalCost">$ -.-</h1>
+                </span>
+            </div>
+            <button type="button" class="btn btn-warning" id="finalizarCompra">¡Finalizar Compra!</button>
+            <!-- <img class="imgFinalizarCompra" id="finalizarCompra" src="images/terminarCompra.png" alt=""> -->
+        </article>
+
+
+

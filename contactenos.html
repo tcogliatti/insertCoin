@@ -1,0 +1,39 @@
+
+    <!-------------------- Contactenos ---------------------->
+
+    <div class="BoxMensaje row" id="idBoxMensaje">
+        <h2 class="tituloMensaje">¡Nos encantará recibir tu mensaje!</h2>
+        <form action="" method="POST" id="formulario">
+            <div class="form-floating mb-4 w-100">
+                <input name="nombre" type="text" class="form-control w-100" id="nombreMensaje"placeholder="Juan Perez" >
+                <label for="nombreMensaje">Nombre y Apellido</label>
+            </div>
+            <div class="form-floating mb-4 w-100">
+                <input name="mail" type="email" class="form-control" id="emailMensaje" placeholder="name@example.com">
+                <label for="emailMensaje">correo</label>
+            </div>
+            <div class="form-floating mb-4 w-100">
+                <textarea name="comentario" class="form-control w-100" placeholder="Leave a comment here" id="textoMensaje" style="height: 100px"></textarea>
+                <label for="textoMensaje">Comentario</label>
+            </div>
+            <p class="esconder2" id="mejeErrorEnviarMensaje">Complete todos los datos antes de enviar</p>
+            
+            <h4 class="tituloMensaje">¿Es usted un humano?</h3>
+            
+            <div class="divCentrado">
+                <img id="captchaImg" class="boxCaptchaImg">
+            </div>
+            <p class="esconderMensaje" id="mejeErrorCaptcha">Captcha Incorrecto</p>
+            <div class="divCentrado">
+                <input type="text" id="captchaIn" class="captchaInStyle mb-4">
+            </div>
+            <div class="divCentrado">
+                <button id="enviarCaptcha" type="submit" class="btn btn-success btn-lg mb-5 border-secondary">Enviar</button>
+            </div>
+            <input type="hidden" name="_next" value="http://localhost:5500">
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+    </div>
+        
+       
+    
